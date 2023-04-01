@@ -1,0 +1,187 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary colors */
+    --Light-red-current: rgb(255, 87, 87);
+    --Light-red: rgba(255, 87, 87, 0.1);
+    /* memory bg color */
+    --Orangey-yellow: rgba(255, 176, 31, 0.05);
+    --Orangey-yellow-current: rgb(255, 176, 31);
+    /* verbal bg color */
+    --Green-teal: rgba(0, 189, 145, 0.1);
+    --Green-teal-current: rgb(0, 189, 145);
+    /* Visual bg color */
+    --Cobalt-blue: rgba(17, 37, 212, 0.1);
+    --Cobalt-blue-current: rgb(17, 37, 212);
+
+    /* Gradient background colors */
+    --Light-slate-blue-background: hsl(252, 100%, 67%); 
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    /* Gradient circle colors */
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    /* fonts family */
+    --font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
+}
+
+.container-grid{
+    /* border: 1px solid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
+    border-radius: 18px;
+}
+
+/* container your reult styling */
+.container-result{
+    padding: 20px 25px;
+    border-radius: 18px;
+    background:linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    color: var(--White);
+    position: relative;
+}
+.p2{
+    color: var(--Light-lavender);
+}
+
+
+h1{
+    margin: 0 0 22px 0;
+    color: var(--Light-lavender);
+}
+
+h2{
+    margin: 20px 0 ;
+}
+
+.seventy-six{
+    background: rgb(17, 37, 212, 0.3);
+    font-size: 45px;
+    /* border: 1px solid; */
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+.span-hundred{
+    position: absolute;
+    top: 150px;
+    right: 110px;
+    color: var(--Light-lavender);
+}
+
+/* container summary styling */
+.container-summary{
+    padding: 20px 25px;
+    background: #fff;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    
+}
+
+.container-summary p{
+    margin: 30px 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.container-summary > p > span::after{
+    content: ' / 100';
+    color:  var(--Dark-gray-blue);
+}
+
+.number-bold{
+    color: var(--Dark-gray-blue);
+    /* font-weight: 700; */
+}
+ /* summary list items background color */
+.reaction{
+    background: var(--Light-red);
+    color: var(--Light-red-current);
+}
+.memory{
+    background: var(--Orangey-yellow);
+    color: var(--Orangey-yellow-current);
+}
+.verbal{
+    background: var(--Green-teal);
+    color: var(--Green-teal-current);
+}
+.visual{
+    background: var(--Cobalt-blue);
+    color: var(--Cobalt-blue-current);
+}
+
+
+.svg {
+    /* border: 1px solid; */
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+
+/* Button styling */
+button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: var(--Dark-gray-blue);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+button:hover {
+    background: var(--Cobalt-blue-current);
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .container-grid{
+        grid-template-columns: 1fr;
+    }
+    .container-result{
+        padding: 50px 80px;
+    }
+    button{
+        padding: 20px 0;
+        border-radius: 30px;
+    }
+    .span-hundred{
+        top: 180px;
+        left: 120px;
+    }
+}
